@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <meta name="description" content="Franchell Polanco — my personal corner of the internet.Updates soon." />
   <link rel="canonical" href="https://franchell.co/" />
+  <script src="https://unpkg.com/feather-icons"></script>
 
   <title>Franchell Polanco</title>
 
@@ -96,6 +97,16 @@
       </p>
     </section>
 
+    <div class="social-links">
+  <a href="https://www.linkedin.com/in/franchellpolanco" target="_blank" aria-label="LinkedIn">
+    <i data-feather="linkedin"></i>
+  </a>
+
+  <a href="https://www.instagram.com/franchell.co" target="_blank" aria-label="Instagram">
+    <i data-feather="instagram"></i>
+  </a>
+</div>
+
     <footer class="footer">
       <p>© <span id="y"></span> Franchell Polanco</p>
     </footer>
@@ -104,5 +115,10 @@
   <script>
     document.getElementById("y").textContent = new Date().getFullYear();
   </script>
+
+  <script>
+  feather.replace();
+</script>
+
 </body>
 </html>
