@@ -1,69 +1,108 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Franchell</title>
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-      background: #f7f5f2;
-      color: #111;
-    }
-    .container {
-      max-width: 720px;
-      padding: 60px 24px;
-      margin: auto;
-    }
-    h1 {
-      font-size: 2.2rem;
-      font-weight: 500;
-      margin-bottom: 24px;
-    }
-    p {
-      font-size: 1.05rem;
-      line-height: 1.6;
-      margin-bottom: 20px;
-    }
-    ul {
-      padding-left: 16px;
-      margin-bottom: 32px;
-    }
-    li {
-      margin-bottom: 8px;
-    }
-    a {
-      color: inherit;
-      text-decoration: underline;
-    }
-  </style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="Franchell Polanco — my personal corner of the internet. Writing, projects, and updates soon." />
+  <link rel="canonical" href="https://franchell.co/" />
+
+  <title>Franchell Polanco</title>
+
+  <!-- Open Graph / Social -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Franchell Polanco" />
+  <meta property="og:description" content="My personal corner of the internet — in progress." />
+  <meta property="og:url" content="https://franchell.co/" />
+  <meta property="og:image" content="https://franchell.co/assets/og.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- Favicons (optional, add files later) -->
+  <!-- <link rel="icon" href="/assets/favicon.ico" /> -->
+
+  <link rel="stylesheet" href="/styles.css" />
+
+  <!-- Schema: Person + WebSite -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@graph":[
+      {
+        "@type":"Person",
+        "@id":"https://franchell.co/#person",
+        "name":"Franchell Polanco",
+        "url":"https://franchell.co/",
+        "image":"https://franchell.co/assets/profile.jpg",
+        "description":"My personal corner of the internet — in progress.",
+        "sameAs":[
+          "https://www.linkedin.com/in/YOUR-LINKEDIN-USERNAME"
+        ]
+      },
+      {
+        "@type":"WebSite",
+        "@id":"https://franchell.co/#website",
+        "url":"https://franchell.co/",
+        "name":"Franchell Polanco",
+        "publisher":{"@id":"https://franchell.co/#person"}
+      },
+      {
+        "@type":"WebPage",
+        "@id":"https://franchell.co/#home",
+        "url":"https://franchell.co/",
+        "name":"Franchell Polanco",
+        "isPartOf":{"@id":"https://franchell.co/#website"},
+        "about":{"@id":"https://franchell.co/#person"},
+        "primaryImageOfPage":"https://franchell.co/assets/profile.jpg"
+      }
+    ]
+  }
+  </script>
 </head>
+
 <body>
-  <div class="container">
-    <h1>Creating a softer, fuller life.</h1>
+  <main class="wrap">
+    <header class="masthead">
+      <div class="portrait" aria-hidden="true">
+        <img
+          src="/assets/profile.jpg"
+          width="720"
+          height="900"
+          alt="Portrait of Franchell Polanco"
+          loading="eager"
+          fetchpriority="high"
+        />
+      </div>
 
-    <p>
-      I’m Franchell. This is a space for the things I’m exploring,
-      building, and becoming — shared in real time.
-    </p>
+      <div class="intro">
+        <h1>Franchell Polanco</h1>
+        <p class="lede">my personal corner of the internet — in progress.</p>
 
-    <ul>
-      <li>Personal growth & self-trust</li>
-      <li>Creative expression</li>
-      <li>Wellness & nervous system care</li>
-      <li>Building intentionally</li>
-    </ul>
+        <nav class="links" aria-label="Primary">
+          <a href="/in-progress/">In progress</a>
+          <a href="https://www.linkedin.com/in/YOUR-LINKEDIN-USERNAME" rel="me">LinkedIn</a>
+          <!-- Add more when ready: GitHub, TikTok, etc. -->
+        </nav>
+      </div>
+    </header>
 
-    <p>
-      Elsewhere:
-      <br />
-      <a href="#">Instagram</a><br />
-      <a href="#">TikTok</a>
-    </p>
+    <section class="editorial">
+      <h2 class="sr-only">About</h2>
+      <p>
+        This site is intentionally simple for now. I’m building a home for writing,
+        projects, and select updates—without needing to post constantly.
+      </p>
 
-    <p><em>In progress.</em></p>
-  </div>
+      <p class="fine">
+        If you’re looking for the latest: <a href="/in-progress/">start here</a>.
+      </p>
+    </section>
+
+    <footer class="footer">
+      <p>© <span id="y"></span> Franchell Polanco</p>
+    </footer>
+  </main>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
