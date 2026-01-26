@@ -139,7 +139,7 @@ h1{
   .portrait{width: min(340px, 100%);}
 }
 .social-links {
-  margin-top: 3rem;
+  margin-top: 4.5rem;
   display: flex;
   gap: 1.75rem;
 }
